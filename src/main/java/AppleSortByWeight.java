@@ -16,7 +16,7 @@ public class AppleSortByWeight {
         }
 
         System.out.println("*** Before sort");
-        for (Apple apple : appleList) System.out.println(apple);
+        showApples(appleList);
 
         // Old style - before Java 8
 //        Collections.sort(appleList, new Comparator<Apple>() {
@@ -28,11 +28,17 @@ public class AppleSortByWeight {
         // New style - Java 8
         System.out.println("*** After sort by weight");
         appleList.sort(comparing(Apple::getWeight));
-        for (Apple apple : appleList) System.out.println(apple);
+        appleList.forEach(System.out::println);
 
         System.out.println("*** After sort by number");
         appleList.sort(comparing(Apple::getNumber));
-        for (Apple apple : appleList) System.out.println(apple);
+        showApples(appleList);
 
+    }
+
+    private static void showApples(List<Apple> list) {
+        for (Apple apple : list) {
+            System.out.println(apple);
+        }
     }
 }
