@@ -18,25 +18,23 @@ public class AppleSortByColorAndWeight {
 
         System.out.println("After sort by color (green only)");
         List<Apple> greenApplesOnly = filterApples(appleList, Apple::isGreenApple);
-        for (Apple apple : greenApplesOnly) System.out.println(apple);
+        showApples(greenApplesOnly);
 
         System.out.println("After sort by weight (heavy only)");
         List<Apple> heavyApplesOnly = filterApples(appleList, Apple::isHeavyApple);
-        for (Apple apple : heavyApplesOnly) System.out.println(apple);
+        showApples(heavyApplesOnly);
 
         System.out.println("With lambdas (red apples only)");
         List<Apple> redApplesOnly = filterApples(appleList, (Apple a) -> "red".equals(a.getColor()));
-        for (Apple apple : redApplesOnly) System.out.println(apple);
+        showApples(redApplesOnly);
 
         System.out.println("With lambdas (light apples only)");
         List<Apple> lightApplesOnly = filterApples(appleList, (Apple a) -> a.getWeight() < 80);
-        for (Apple apple : lightApplesOnly) System.out.println(apple);
+        showApples(lightApplesOnly);
 
         System.out.println("With lambdas (heavy green apples)");
-        List<Apple> heavyGreenApplesOnly = filterApples(appleList,
-                (Apple a) -> a.getWeight() > 150 && "green".equals(a.getColor()));
-        for (Apple apple : heavyGreenApplesOnly) System.out.println(apple);
-
+        List<Apple> heavyGreenApplesOnly = filterApples(appleList, (Apple a) -> a.getWeight() > 150 && "green".equals(a.getColor()));
+        showApples(heavyGreenApplesOnly);
     }
 
     public interface Predicate<T> {
@@ -51,5 +49,11 @@ public class AppleSortByColorAndWeight {
             }
         }
         return result;
+    }
+
+    private static void showApples(List<Apple> list) {
+        for (Apple apple : list) {
+            System.out.println(apple);
+        }
     }
 }
