@@ -17,7 +17,7 @@ public class AppleSortStreams {
         System.out.println("Sequential processing");
         long start = System.currentTimeMillis();
         List<Apple> heavyApples =
-                appleList.stream().filter((Apple a) -> a.getWeight() > 230)
+                appleList.stream().filter((Apple a) -> a.getWeight() > 229)
                                   .collect(toList());
         long finish = System.currentTimeMillis();
         System.out.println("It takes, ms: " + (finish - start));
