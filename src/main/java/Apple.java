@@ -42,7 +42,11 @@ public class Apple {
 
     @Override
     public String toString() {
-        return "Apple #" + getNumber() + ", weight = " + getWeight() + ", color = " + getColor();
+        return "Apple{" +
+                "weight=" + weight +
+                ", number=" + number +
+                ", color='" + color + '\'' +
+                '}';
     }
 
     public static boolean isGreenApple(Apple apple) {

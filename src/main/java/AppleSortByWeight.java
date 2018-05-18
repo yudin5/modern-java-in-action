@@ -10,12 +10,12 @@ public class AppleSortByWeight {
 
         // Creating apples
         List<Apple> appleList = new ArrayList<>();
-        for (int i = 1; i < 6; i++) {
+        for (int i = 1; i < 5; i++) {
             Apple apple = new Apple(i, (int) (Math.random()*200 + 1));
             appleList.add(apple);
         }
 
-        System.out.println("Before sort");
+        System.out.println("*** Before sort");
         for (Apple apple : appleList) System.out.println(apple);
 
         // Old style - before Java 8
@@ -26,14 +26,12 @@ public class AppleSortByWeight {
 //        });
 
         // New style - Java 8
+        System.out.println("*** After sort by weight");
         appleList.sort(comparing(Apple::getWeight));
-
-        System.out.println("After sort by weight");
         for (Apple apple : appleList) System.out.println(apple);
 
+        System.out.println("*** After sort by number");
         appleList.sort(comparing(Apple::getNumber));
-
-        System.out.println("After sort by number");
         for (Apple apple : appleList) System.out.println(apple);
 
     }
