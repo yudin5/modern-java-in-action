@@ -15,6 +15,7 @@ public class AppleSortByWeight {
             appleList.add(apple);
         }
 
+        //TODO: just for test
         System.out.println("*** Before sort");
         showApples(appleList);
 
