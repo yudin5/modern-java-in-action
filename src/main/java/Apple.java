@@ -53,6 +53,10 @@ public class Apple {
         return "green".equals(apple.getColor());
     }
 
+    public static boolean isRedApple(Apple apple) {
+        return "red".equals(apple.getColor());
+    }
+
     public static boolean isHeavyApple(Apple apple) {
         return apple.getWeight() > 150;
     }

@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.*;
+import java.util.stream.Collectors;
 
 public class AppleSortByColorAndWeight {
     public static void main(String[] args) {
@@ -35,6 +37,13 @@ public class AppleSortByColorAndWeight {
         System.out.println("With lambdas (heavy green apples)");
         List<Apple> heavyGreenApplesOnly = filterApples(appleList, (Apple a) -> a.getWeight() > 150 && "green".equals(a.getColor()));
         showApples(heavyGreenApplesOnly);
+
+        System.out.println("Only red heavy apples");
+        List<Apple> redApples = filterApples(appleList, Apple::isRedApple).stream()
+                .filter(apple -> apple.getWeight() > 50)
+                .sorted(Comparator.comparing(Apple::getWeight))
+                .collect(Collectors.toList());
+        showApples(redApples);
     }
 
     public interface Predicate<T> {
