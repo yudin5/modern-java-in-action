@@ -26,6 +26,11 @@ public class AppleSortTestDrive {
 
         System.out.println("Fancy apples output:");
         prettyPrintApple(apples, new AppleFancyFormatter());
+
+        System.out.println();
+
+        System.out.println("Simple apples output");
+        prettyPrintApple(apples, new AppleSimpleFormatter());
     }
 
     public static List<Apple> filterApples(List<Apple> inventory, ApplePredicate p) {
