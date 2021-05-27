@@ -1,3 +1,5 @@
+package chapter_1_basics;
+
 import model.Apple;
 
 import java.util.ArrayList;
