@@ -1,6 +1,6 @@
 package chapter_1_basics;
 
-import model.Apple;
+import chapter_1_basics.model.Apple;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,8 +22,8 @@ public class AppleSortByWeight {
         showApples(appleList);
 
         // Old style - before Java 8
-//        Collections.sort(appleList, new Comparator<model.Apple>() {
-//            public int compare(model.Apple a1, model.Apple a2) {
+//        Collections.sort(appleList, new Comparator<chapter_1_basics.model.Apple>() {
+//            public int compare(chapter_1_basics.model.Apple a1, chapter_1_basics.model.Apple a2) {
 //                return a1.getWeight() - a2.getWeight();
 //            }
 //        });
