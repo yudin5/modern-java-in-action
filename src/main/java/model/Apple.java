@@ -19,6 +19,10 @@ public class Apple {
         return apple.getWeight() > 150;
     }
 
+    public static boolean isRedApple(Apple apple) {
+        return "red".equals(apple.getColor());
+    }
+
 
     // Конструкторы
     public Apple() {

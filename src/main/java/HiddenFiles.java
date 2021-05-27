@@ -4,15 +4,29 @@ import java.io.FileFilter;
 public class HiddenFiles {
     public static void main(String[] args) {
         // Old style
+//        System.out.println("Old style");
+//        File[] hiddenFiles = new File("C:\\Test").listFiles(new FileFilter(){
+//            public boolean accept(File file) {
+//                return file.isHidden();
+//            }
+//        });
+//
+//        if (hiddenFiles == null || hiddenFiles.length == 0) {
+//            System.out.println("Директория C:\\Test пуста");
+//        }
+
+        // Old style
         System.out.println("Old style");
-        File[] hiddenFiles = new File("C:\\Test").listFiles(new FileFilter(){
+        File[] hiddenFiles = new File(".").listFiles(new FileFilter(){
             public boolean accept(File file) {
                 return file.isHidden();
             }
         });
+
         if (hiddenFiles == null || hiddenFiles.length == 0) {
-            System.out.println("Директория C:\\Test пуста");
+            System.out.println("Директория пуста");
         }
+
 
         for (File file : hiddenFiles) System.out.println(file);
 

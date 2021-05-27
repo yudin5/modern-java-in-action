@@ -40,19 +40,16 @@ public class AppleSortByColorAndWeight {
         List<Apple> heavyGreenApplesOnly = filterApples(appleList, (Apple a) -> a.getWeight() > 150 && "green".equals(a.getColor()));
         showApples(heavyGreenApplesOnly);
         Predicate<Apple> heavyGreenAppliePredicat = (Apple a) -> a.getWeight() > 150 && "green".equals(a.getColor());
-        List<Apple> heavyGreenApplesOnly = filterApples(appleList, heavyGreenAppliePredicat);
-        for (Apple apple : heavyGreenApplesOnly) {
-            System.out.println(apple);
-        }
+        heavyGreenApplesOnly.forEach(System.out::println);
 
         Predicate<Apple> orangeApplePredicate = (Apple a) -> "orange".equals(a.getColor());
         List<Apple> orangeApples = filterApples(appleList, orangeApplePredicate);
         System.out.println("Orange apples:");
         orangeApples.forEach(System.out::println);
 
-        System.out.println("Only red heavy apples");
+        System.out.println("Only red apples, sorted by weight");
         List<Apple> redApples = filterApples(appleList, Apple::isRedApple).stream()
-                .filter(apple -> apple.getWeight() > 50)
+                .filter(apple -> apple.getWeight() > 10)
                 .sorted(Comparator.comparing(Apple::getWeight))
                 .collect(Collectors.toList());
         showApples(redApples);
