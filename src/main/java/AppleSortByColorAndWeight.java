@@ -1,14 +1,14 @@
+import model.Apple;
+
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
-import java.util.function.*;
 
 public class AppleSortByColorAndWeight {
     public static void main(String[] args) {
         // Creating apples
         List<Apple> appleList = new ArrayList<>();
         for (int i = 1; i < 10; i++) {
-            Apple apple = new Apple(i, (int) (Math.random()*200 + 1));
+            Apple apple = new Apple(i, (int) (Math.random() * 200 + 1));
             if (i % 2 == 0) apple.setColor("green");
             appleList.add(apple);
         }
@@ -33,9 +33,16 @@ public class AppleSortByColorAndWeight {
         for (Apple apple : lightApplesOnly) System.out.println(apple);
 
         System.out.println("With lambdas (heavy green apples)");
-        List<Apple> heavyGreenApplesOnly = filterApples(appleList,
-                (Apple a) -> a.getWeight() > 150 && "green".equals(a.getColor()));
-        for (Apple apple : heavyGreenApplesOnly) System.out.println(apple);
+        Predicate<Apple> heavyGreenAppliePredicat = (Apple a) -> a.getWeight() > 150 && "green".equals(a.getColor());
+        List<Apple> heavyGreenApplesOnly = filterApples(appleList, heavyGreenAppliePredicat);
+        for (Apple apple : heavyGreenApplesOnly) {
+            System.out.println(apple);
+        }
+
+        Predicate<Apple> orangeApplePredicate = (Apple a) -> "orange".equals(a.getColor());
+        List<Apple> orangeApples = filterApples(appleList, orangeApplePredicate);
+        System.out.println("Orange apples:");
+        orangeApples.forEach(System.out::println);
 
     }
 
