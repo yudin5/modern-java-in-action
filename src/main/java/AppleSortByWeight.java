@@ -1,6 +1,6 @@
+import model.Apple;
+
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import static java.util.Comparator.comparing;
@@ -20,8 +20,8 @@ public class AppleSortByWeight {
         showApples(appleList);
 
         // Old style - before Java 8
-//        Collections.sort(appleList, new Comparator<Apple>() {
-//            public int compare(Apple a1, Apple a2) {
+//        Collections.sort(appleList, new Comparator<model.Apple>() {
+//            public int compare(model.Apple a1, model.Apple a2) {
 //                return a1.getWeight() - a2.getWeight();
 //            }
 //        });

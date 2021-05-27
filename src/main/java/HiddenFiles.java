@@ -10,6 +10,10 @@ public class HiddenFiles {
                 return file.isHidden();
             }
         });
+        if (hiddenFiles == null || hiddenFiles.length == 0) {
+            System.out.println("Директория C:\\Test пуста");
+        }
+
         for (File file : hiddenFiles) System.out.println(file);
 
         // Java 8 style

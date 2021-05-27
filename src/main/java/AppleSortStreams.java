@@ -1,3 +1,5 @@
+import model.Apple;
+
 import java.util.ArrayList;
 import java.util.List;
 
