@@ -24,6 +24,12 @@ public class AppleSortTestDrive {
 
         System.out.println();
 
+        List<Apple> heavyApples = filterApples(apples, new AppleHeavyWeightPredicate());
+        System.out.println("Heavy apples:");
+        heavyApples.forEach(System.out::println);
+
+        System.out.println();
+
         System.out.println("Fancy apples output:");
         prettyPrintApple(apples, new AppleFancyFormatter());
 
