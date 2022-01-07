@@ -1,4 +1,4 @@
-package chapter_1_basics.model;
+package part_1_basics.chapter_1.model;
 
 public class Apple {
 
@@ -59,6 +59,6 @@ public class Apple {
 
     @Override
     public String toString() {
-        return "chapter_1_basics.model.Apple #" + getNumber() + ", weight = " + getWeight() + ", color = " + getColor();
+        return "part_1_basics.chapter_1_basics.model.Apple #" + getNumber() + ", weight = " + getWeight() + ", color = " + getColor();
     }
 }

@@ -1,9 +1,9 @@
-package chapter_2;
+package part_1_basics.chapter_2;
 
-import chapter_2.model.Apple;
-import chapter_2.model.AppleFormatter;
-import chapter_2.model.ApplePredicate;
-import chapter_2.model.Color;
+import part_1_basics.chapter_2.model.Apple;
+import part_1_basics.chapter_2.model.AppleFormatter;
+import part_1_basics.chapter_2.model.ApplePredicate;
+import part_1_basics.chapter_2.model.Color;
 
 import java.util.ArrayList;
 import java.util.Arrays;

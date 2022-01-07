@@ -1,4 +1,4 @@
-package chapter_1_basics;
+package part_1_basics.chapter_1;
 
 import java.io.File;
 import java.io.FileFilter;

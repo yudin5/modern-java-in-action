@@ -1,6 +1,6 @@
-package chapter_1_basics;
+package part_1_basics.chapter_1;
 
-import chapter_1_basics.model.Apple;
+import part_1_basics.chapter_1.model.Apple;
 
 import java.util.ArrayList;
 import java.util.Comparator;
