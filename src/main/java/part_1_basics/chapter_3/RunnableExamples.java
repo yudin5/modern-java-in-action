@@ -12,6 +12,14 @@ public class RunnableExamples {
         process(r1);
         process(r2);
         process(() -> System.out.println("Hello world 3"));
+
+        process(() -> {
+            int i = 4;
+            System.out.println("Hello world " + i);
+            i = 5;
+            System.out.println("Hello world " + i);
+        });
+
     }
 
     public static void process(Runnable r) {
