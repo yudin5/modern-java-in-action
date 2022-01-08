@@ -8,5 +8,10 @@ public class ObjectAndRunnable {
         Runnable r = () -> System.out.println("Tricky!");
         System.out.println("r = " + r);
         r.run();
+
+        Integer portNumber = 3313;
+        Runnable runnable = () -> System.out.println(portNumber);
+        runnable.run();
+//        portNumber = 234; // Не скомпилируется
     }
 }
