@@ -1,6 +1,6 @@
-package part_1_basics.chapter_3;
+package part_1_basics.chapter_3_lambdas;
 
-import part_1_basics.chapter_3.model.Apple;
+import part_1_basics.chapter_3_lambdas.model.Apple;
 
 import java.util.Arrays;
 import java.util.Collections;

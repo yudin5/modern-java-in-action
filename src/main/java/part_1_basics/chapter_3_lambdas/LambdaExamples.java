@@ -1,4 +1,4 @@
-package part_1_basics.chapter_3;
+package part_1_basics.chapter_3_lambdas;
 
 import part_1_basics.chapter_1.model.Apple;
 

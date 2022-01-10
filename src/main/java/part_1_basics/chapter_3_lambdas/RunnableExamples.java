@@ -1,4 +1,4 @@
-package part_1_basics.chapter_3;
+package part_1_basics.chapter_3_lambdas;
 
 public class RunnableExamples {
     public static void main(String[] args) {

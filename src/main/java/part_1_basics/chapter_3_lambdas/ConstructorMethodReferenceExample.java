@@ -1,8 +1,8 @@
-package part_1_basics.chapter_3;
+package part_1_basics.chapter_3_lambdas;
 
-import part_1_basics.chapter_3.model.Apple;
-import part_1_basics.chapter_3.model.Fruit;
-import part_1_basics.chapter_3.model.Orange;
+import part_1_basics.chapter_3_lambdas.model.Apple;
+import part_1_basics.chapter_3_lambdas.model.Fruit;
+import part_1_basics.chapter_3_lambdas.model.Orange;
 
 import java.util.*;
 import java.util.function.Function;

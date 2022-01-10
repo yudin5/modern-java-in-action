@@ -1,4 +1,4 @@
-package part_1_basics.chapter_3.model;
+package part_1_basics.chapter_3_lambdas.model;
 
 public class Orange extends Fruit {
 
