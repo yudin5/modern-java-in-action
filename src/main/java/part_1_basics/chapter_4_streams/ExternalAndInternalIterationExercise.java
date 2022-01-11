@@ -35,6 +35,7 @@ public class ExternalAndInternalIterationExercise {
         List<String> dishes3 = menu.stream()
                 .filter(dish -> dish.getCalories() > 300)
                 .map(Dish::getName)
+                .limit(2)
                 .collect(Collectors.toList());
         System.out.println("highCaloricDishes 3 = " + dishes3);
     }
