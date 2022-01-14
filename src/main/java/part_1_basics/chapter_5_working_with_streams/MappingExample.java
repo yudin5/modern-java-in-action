@@ -27,6 +27,7 @@ public class MappingExample {
         List<Integer> dishNameLengths = menu.stream()
                 .map(Dish::getName)
                 .map(String::length)
+                .distinct()
                 .collect(Collectors.toList());
         System.out.println("dishNameLengths = " + dishNameLengths);
     }
