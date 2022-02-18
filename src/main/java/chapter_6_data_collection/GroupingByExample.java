@@ -41,7 +41,7 @@ public class GroupingByExample {
 
         // Сложный пример. Попытка вручную получить мапу из городов и имён трейдеров
         // вида {Milan=[Mario], Cambridge=[Raoul, Alan, Brian]}
-        // Выглядит ужасно
+        // Выглядит ужасно. Хотя не так уж и ужасно.
         Stream<Trader> traders2 = Stream.of(raoul, mario, alan, brian);
         Map<String, List<String>> traderNamesByCity = new HashMap<>();
         traders2
