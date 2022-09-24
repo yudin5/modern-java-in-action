@@ -3,11 +3,7 @@ package chapter_6_data_collection;
 import chapter_5_working_with_streams.trading.Trader;
 import chapter_5_working_with_streams.trading.Transaction;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -37,7 +33,6 @@ public class GroupingByExample {
         Stream<Trader> traders = Stream.of(raoul, mario, alan, brian);
         Map<String, List<Trader>> tradersByCity = traders.collect(Collectors.groupingBy(Trader::getCity));
         System.out.println("tradersByCity = " + tradersByCity);
-
 
         // Сложный пример. Попытка вручную получить мапу из городов и имён трейдеров
         // вида {Milan=[Mario], Cambridge=[Raoul, Alan, Brian]}
