@@ -34,6 +34,7 @@ public class MapUniqueSymbols {
                         .map(word -> word.split(""))
                         .flatMap(Arrays::stream)
                         .distinct()
+                        .sorted()
                         .collect(Collectors.toList());
         System.out.println("uniqueCharacters = " + uniqueCharacters);
 

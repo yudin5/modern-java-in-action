@@ -10,7 +10,7 @@ public class FibonacciExercise {
         Stream.iterate(new int[]{0, 1},
                         arr -> new int[]{arr[1], arr[0] + arr[1]})
                 .limit(20)
-                .forEach(t -> System.out.println("(" + t[0] + "," + t[1] + ")"));
+                .forEach(t -> System.out.println("(" + t[0] + ", " + t[1] + ")"));
 
         // Оставить только числа Фибоначчи
         Stream.iterate(new int[]{0, 1},

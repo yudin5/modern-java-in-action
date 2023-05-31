@@ -9,7 +9,7 @@ public class LocalDate_example {
     public static void main(String[] args) {
 
         // Получение даты и её составляющих
-        LocalDate date = LocalDate.of(2022, 3, 25);
+        LocalDate date = LocalDate.of(2023, 5, 31);
         int year = date.getYear();
         Month month = date.getMonth();
         int dayOfMonth = date.getDayOfMonth();
